@@ -74,7 +74,7 @@ export default function Main(props) {
             top: "0",
           }}
           src="https://my.spline.design/devicemodelcopy-0ce13ce3a9e75498edbbd02f26000b4b/"
-          frameborder="0"
+          // frameborder="0"
           width="100%"
           height="100%"
         ></iframe>
@@ -140,7 +140,7 @@ export default function Main(props) {
         <div className={FormWrapper}>
           <label
             style={props.night ? { color: "#fff" } : { color: "#828282" }}
-            for="amount"
+            htmlFor="amount"
           >
             Amount
           </label>
@@ -157,7 +157,7 @@ export default function Main(props) {
           </div>
           <label
             style={props.night ? { color: "#fff" } : { color: "#828282" }}
-            for="target-price"
+            htmlFor="target-price"
           >
             Target Price
           </label>
