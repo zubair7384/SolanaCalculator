@@ -14,7 +14,7 @@ export default function Main(props) {
     useState("0.0000");
   const [difference, setDifference] = useState(0.0);
   const countUpRef = React.useRef(null);
-  const { currency, currencySelect } = useContext(ModalContexts);
+  const { currency, currencySelect, setLoading } = useContext(ModalContexts);
   const {
     MainWrapper,
     CryptoDetails,
@@ -58,7 +58,9 @@ export default function Main(props) {
     setDifference(((targetPrice - price) / price) * 100);
   };
   const totalVal = totalValue.toFixed(3);
-
+  const handleLoad = () => {
+    setLoading(true);
+  };
   useEffect(() => {}, []);
 
   return (
@@ -75,6 +77,7 @@ export default function Main(props) {
           }}
           src="https://my.spline.design/devicemodelcopy-0ce13ce3a9e75498edbbd02f26000b4b/"
           // frameborder="0"
+          onLoad={handleLoad}
           width="100%"
           height="100%"
         ></iframe>

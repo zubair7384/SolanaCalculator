@@ -16,6 +16,7 @@ export default function Home() {
   const [time, setTime] = useState(null);
   const [currencySelect, setCurrencySelect] = useState(false);
   const [dark, setDark] = useState(false);
+  const [loading, setLodaing] = useState(false);
   const [cryptoData, setCryptoData] = useState([]);
   const [sol, setSol] = useState({});
   const handleDark = () => {
@@ -49,7 +50,7 @@ export default function Home() {
   useEffect(() => {
     getCryptoData();
   }, [data]);
-  if (isLoading)
+  if (isLoading && loading)
     return (
       <Spinner animation="border" role="status">
         <span className="visually-hidden">Loading...</span>
@@ -87,7 +88,14 @@ export default function Home() {
         />
       </Head>
       <ModalContexts.Provider
-        value={{ currency, setCurrency, setCurrencySelect, currencySelect }}
+        value={{
+          currency,
+          setCurrency,
+          setCurrencySelect,
+          currencySelect,
+          setLodaing,
+          loading,
+        }}
       >
         <Header className="header" handleDark={handleDark} night={dark} />
         <Main sol={sol} night={dark} />
