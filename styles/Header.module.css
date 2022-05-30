@@ -1,0 +1,82 @@
+.Container {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.AppHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+}
+.AppLogo,
+.TooglerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AppLogo > h2 {
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 22px;
+  margin-left: 7px;
+}
+.DarkModeButton {
+  margin-right: 5rem;
+  cursor: pointer;
+}
+.HamburgerWrapper {
+  cursor: pointer;
+}
+.DropDown {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 100px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.DropDown > p {
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  margin-left: 4px;
+}
+.DropDown > span {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 11px;
+  margin-left: 4px;
+  transform: rotate(180deg);
+  margin-bottom: 6px;
+}
+@media only screen and (max-width: 600px) {
+  .AppLogo > h2 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 5px;
+  }
+  .DarkModeButton {
+    margin-right: 0.5rem;
+  }
+  .DarkModeButtonImage {
+    width: 27px !important;
+    height: 27px !important;
+  }
+  .DropDown {
+    width: 74px;
+    height: 27px;
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,82 @@
+.SidebarContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+.SidebarWrapper,
+.SidebarWrapperNight {
+  position: absolute;
+  width: 40%;
+  background: linear-gradient(
+    269.95deg,
+    rgba(173, 104, 233, 0.8) 7.85%,
+    rgba(29, 251, 174, 0.8) 90.17%
+  );
+  backdrop-filter: blur(50px);
+  border-radius: 50px 0px 0px 50px;
+  height: 100vh;
+  right: 0;
+  z-index: 2;
+  transition: all 0.35s ease-in-out;
+}
+.SidebarWrapperNight {
+  background: linear-gradient(
+    269.95deg,
+    rgba(173, 104, 233, 0.6) 7.85%,
+    rgba(29, 251, 174, 0.6) 90.17%
+  );
+  backdrop-filter: blur(50px);
+}
+.SidebarList,
+.SidebarListNight {
+  padding: 0;
+  margin-top: 7rem;
+}
+.SidebarList > li,
+.SidebarListNight > li {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 275;
+  font-size: 36px;
+  line-height: 43px;
+  list-style-type: none;
+  color: #f2f2f2;
+  cursor: pointer;
+  border-top: 1px solid #fff;
+  padding: 40px 80px;
+}
+.SidebarListNight > li {
+  filter: invert(1);
+}
+.SidebarList > li:last-child {
+  border-bottom: 1px solid #fff;
+}
+.SidebarListNight > li:last-child {
+  border-bottom: 1px solid #fff;
+  filter: invert(1);
+}
+.SidebarList > li:hover {
+  background: #0000002e;
+  transition: all 0.35s ease-in-out;
+}
+.SidebarListNight > li:hover {
+  background: #00000014;
+  transition: all 0.35s ease-in-out;
+}
+.SidebarWrapper > div,
+.SidebarWrapperNight > div {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  right: 80px;
+  top: 60px;
+}
+.SidebarWrapperNight > div {
+  filter: invert(1);
+}

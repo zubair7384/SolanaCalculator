@@ -1,0 +1,135 @@
+.AppFooter {
+  position: relative;
+  height: 100vh;
+}
+.CryptoWrapper {
+  padding-top: 12px;
+  height: 70px;
+  background: rgb(0, 0, 0);
+}
+.CryptoWrapperDark {
+  padding-top: 12px;
+  height: 70px;
+  background: #333333;
+}
+.ItemWrapper {
+  display: flex !important;
+  /* width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite; */
+}
+.ItemWrapper > h3 {
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 38px;
+  color: #e5e5e5;
+  margin: 0;
+}
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.CalculatorCopyRight {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    269.95deg,
+    rgba(173, 104, 233, 0.8) 7.85%,
+    rgba(29, 251, 174, 0.8) 90.17%
+  );
+}
+.CalculatorCopyRight > p {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #4f4f4f;
+}
+.FooterBrand,
+.FooterBrandDark {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 62.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.FooterBrandDark {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.02) 62.44%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.FooterBrand > h2,
+.FooterBrandDark > h2 {
+  margin: 0 auto;
+  font-size: 8.7vw;
+  line-height: 7vw;
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1366px) {
+  .FooterBrand > h2,
+  .FooterBrandDark > h2 {
+    line-height: 8vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .CryptoWrapperDark,
+  .CryptoWrapper {
+    padding-top: 5px;
+    height: 50px;
+  }
+  .ItemWrapper > h3 {
+    font-size: 30px;
+  }
+  .CalculatorCopyRight > p {
+    font-size: 11px;
+  }
+  .FooterBrand,
+  .FooterBrandDark {
+    position: absolute;
+    font-size: 149px;
+    line-height: 130px;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 38.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .FooterBrandDark {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.02) 38.44%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .FooterBrand > h2,
+  .FooterBrandDark > h2 {
+    font-size: 149px;
+    line-height: 130px;
+  }
+}
