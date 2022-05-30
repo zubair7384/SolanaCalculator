@@ -80,3 +80,22 @@
     margin-right: 0.5rem;
   }
 }
+@media only screen and (max-width: 420px) {
+  .AppHeader {
+    margin: 10px auto;
+    height: 40px;
+  }
+  .AppLogo > h2 {
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: 5px;
+    margin-top: 4px;
+  }
+  /* .DarkModeButton {
+    margin-right: 0.5rem;
+  } */
+  /* .DarkModeButtonImage {
+    width: 27px !important;
+    height: 27px !important;
+  }  */
+}

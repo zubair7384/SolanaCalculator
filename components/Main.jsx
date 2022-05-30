@@ -56,7 +56,7 @@ export default function Main(props) {
   };
   return (
     <div className={MainWrapper}>
-      <div>
+      <div className="IfarameWrapper">
         <iframe
           className={iframe}
           style={{

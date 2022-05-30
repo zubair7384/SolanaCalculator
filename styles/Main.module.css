@@ -165,15 +165,24 @@
   right: 0;
   top: 16px;
 }
+@media only screen and (max-width: 1366px) {
+  .Calculator {
+    margin-top: 50px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .MainWrapper {
     width: 100%;
-    height: 69vh;
+    height: calc(100% - 29%);
+    margin-top: 0;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
   }
   .CryptoDetails {
     position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
   }
   .ResultWrapper {
     display: flex;
@@ -225,8 +234,126 @@
     width: 38%;
   }
 }
-@media only screen and (max-width: 1366px) {
+
+@media only screen and (max-width: 420px) {
+  .CryptoDetails {
+    margin-bottom: 4%;
+  }
   .Calculator {
-    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    margin: 20px;
+    padding: 25px 20px 18px 20px;
+    border-radius: 42px;
+    margin-top: 0;
+  }
+  .FormWrapper {
+    margin-top: 22px;
+  }
+  .FormWrapper > label {
+    font-size: 12px;
+  }
+  .Calculator > h4 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .Price,
+  .Amount {
+    font-size: 12px;
+    margin: 0;
+  }
+  .InputWrapper > span {
+    font-size: 12px;
+    top: 4px;
+  }
+  .Button {
+    font-size: 12px;
+    width: 34%;
+    height: auto;
+    line-height: 5px;
+    margin-top: 16px;
+  }
+  .Calculator .ResultWrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 6px auto;
+  }
+  .TotalValue,
+  .Difference,
+  .MarketCap {
+    margin: 0 25px 8px 0;
+  }
+  .TotalValue > p,
+  .Difference > p,
+  .MarketCap > p {
+    font-size: 12px;
+    margin-top: 6px;
+    line-height: 0px;
+  }
+  .TotalValue > span,
+  .Difference > span,
+  .MarketCap > span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .Calculator {
+    width: 90%;
+    height: auto;
+    margin: 20px;
+    padding: 4px 14px;
+    border-radius: 18px;
+    margin-top: 0;
+  }
+  .FormWrapper {
+    margin-top: 0;
+  }
+  .FormWrapper > label {
+    font-size: 10px;
+  }
+  .Calculator > h4 {
+    margin: 10px 0 0 0;
+    font-size: 19px;
+    line-height: 21px;
+  }
+  .Price,
+  .Amount {
+    font-size: 10px;
+    margin: 0;
+  }
+  .InputWrapper > span {
+    font-size: 10px;
+    top: 4px;
+  }
+  .Button {
+    font-size: 10px;
+    width: 36%;
+    height: auto;
+    line-height: 2px;
+    margin-top: 3px;
+  }
+  .ResultWrapper {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 6px auto;
+  }
+  .TotalValue,
+  .Difference,
+  .MarketCap {
+    margin: 0 25px 1px 0;
+  }
+  .TotalValue > p,
+  .Difference > p,
+  .MarketCap > p {
+    font-size: 10px;
+    margin-top: 6px;
+    line-height: 0px;
+  }
+  .TotalValue > span,
+  .Difference > span,
+  .MarketCap > span {
+    font-size: 10px;
   }
 }

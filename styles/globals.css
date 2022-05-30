@@ -61,6 +61,7 @@ a {
 .solana:hover {
   color: #15f095;
 }
+
 .dropdown {
   display: flex;
   justify-content: space-evenly;
@@ -141,4 +142,27 @@ a {
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+.marquee {
+  justify-content: space-between !important;
+}
+@media only screen and (max-width: 600px) {
+  .IfarameWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 6%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .dropdown {
+    width: 63px;
+    height: 27px;
+    margin-right: 2px;
+  }
+  .dropdown > p {
+    font-size: 10px;
+  }
 }
