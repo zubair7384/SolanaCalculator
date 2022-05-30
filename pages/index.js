@@ -16,7 +16,6 @@ export default function Home() {
   const [time, setTime] = useState(null);
   const [currencySelect, setCurrencySelect] = useState(false);
   const [dark, setDark] = useState(false);
-  const [loading, setLodaing] = useState(false);
   const [cryptoData, setCryptoData] = useState([]);
   const [sol, setSol] = useState({});
   const handleDark = () => {
@@ -50,11 +49,13 @@ export default function Home() {
   useEffect(() => {
     getCryptoData();
   }, [data]);
-  if (isLoading && loading)
+  if (isLoading)
     return (
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </Spinner>
+      <div className="Loader">
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
     );
 
   if (error) return "An error has occurred: " + error.message;
@@ -93,8 +94,6 @@ export default function Home() {
           setCurrency,
           setCurrencySelect,
           currencySelect,
-          setLodaing,
-          loading,
         }}
       >
         <Header className="header" handleDark={handleDark} night={dark} />

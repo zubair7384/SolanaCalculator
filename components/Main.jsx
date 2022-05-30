@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Form, Button } from "react-bootstrap";
 import Image from "next/image";
 import CountUp from "react-countup";
+import { Spinner } from "react-bootstrap";
 import { ModalContexts } from "../contexts/ModalContexts";
 import styles from "../styles/Main.module.css";
 
@@ -13,8 +14,7 @@ export default function Main(props) {
   const [marketCapAtTargetPrice, setMarketCapAtTargetPrice] =
     useState("0.0000");
   const [difference, setDifference] = useState(0.0);
-  const countUpRef = React.useRef(null);
-  const { currency, currencySelect, setLoading } = useContext(ModalContexts);
+  const { currency, currencySelect } = useContext(ModalContexts);
   const {
     MainWrapper,
     CryptoDetails,
@@ -23,9 +23,6 @@ export default function Main(props) {
     Amount,
     Price,
     Button,
-    EclipsLg,
-    EclipsMd,
-    EclipsSm,
     ResultWrapper,
     TotalValue,
     Difference,
@@ -57,12 +54,6 @@ export default function Main(props) {
     setMarketCapAtTargetPrice(availableSupply * targetPrice);
     setDifference(((targetPrice - price) / price) * 100);
   };
-  const totalVal = totalValue.toFixed(3);
-  const handleLoad = () => {
-    setLoading(true);
-  };
-  useEffect(() => {}, []);
-
   return (
     <div className={MainWrapper}>
       <div>
@@ -76,22 +67,12 @@ export default function Main(props) {
             top: "0",
           }}
           src="https://my.spline.design/devicemodelcopy-0ce13ce3a9e75498edbbd02f26000b4b/"
-          // frameborder="0"
-          onLoad={handleLoad}
           width="100%"
           height="100%"
         ></iframe>
+
         <div className={iframeLogo}></div>
       </div>
-      {/* <div className={EclipsLg}>
-        <Image width={500} height={500} src="/bg_elips.svg" alt="elips" />
-      </div>
-      <div className={EclipsSm}>
-        <Image width={60} height={60} src="/bg_elips.svg" alt="elips" />
-      </div>
-      <div className={EclipsMd}>
-        <Image width={320} height={320} src="/bg_elips.svg" alt="elips" />
-      </div> */}
       <div className={CryptoDetails}>
         <div className={ResultWrapper}>
           <div className={TotalValue}>
