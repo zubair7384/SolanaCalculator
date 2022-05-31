@@ -41,15 +41,15 @@ export default function Header(props) {
         <div className={AppLogo}>
           {props.night ? (
             <Image
-              width={width > 600 ? 50 : 37}
-              height={width > 600 ? 50 : 37}
+              width={width > 600 ? 50 : 30}
+              height={width > 600 ? 50 : 30}
               src="/calculator_logo_night.svg"
               alt="solana-calculator-night"
             />
           ) : (
             <Image
-              width={width > 600 ? 50 : 37}
-              height={width > 600 ? 50 : 37}
+              width={width > 600 ? 50 : 30}
+              height={width > 600 ? 50 : 30}
               src="/calculator_logo.svg"
               alt="solana-calculator"
             />

@@ -80,3 +80,23 @@
 .SidebarWrapperNight > div {
   filter: invert(1);
 }
+
+@media only screen and (max-width: 768px) {
+  .SidebarContainer {
+    top: -10px;
+  }
+  .SidebarWrapper,
+  .SidebarWrapperNight {
+    width: 100%;
+  }
+  .SidebarList > li,
+  .SidebarListNight > li {
+    font-size: 20px;
+    padding: 20px 50px;
+  }
+  .SidebarWrapper > div,
+  .SidebarWrapperNight > div {
+    right: 52px;
+    top: 85px;
+  }
+}

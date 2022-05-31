@@ -9,6 +9,8 @@ import styles from "../styles/Main.module.css";
 export default function Main(props) {
   const [amount, setAmount] = useState("");
   const [targetPrice, setTargetPrice] = useState("");
+  const [focusPrice, setFocusPrice] = useState(false);
+  const [focusAmount, setFocusAmount] = useState(false);
   const [countUp, setCountUp] = useState(false);
   const [totalValue, setTotalValue] = useState(0.0);
   const [marketCapAtTargetPrice, setMarketCapAtTargetPrice] =
@@ -20,6 +22,7 @@ export default function Main(props) {
     CryptoDetails,
     Calculator,
     FormWrapper,
+    ButtonNight,
     Amount,
     Price,
     Button,
@@ -122,33 +125,38 @@ export default function Main(props) {
           CALCULATE <br /> SOLANA VALUE
         </h4>
         <div className={FormWrapper}>
-          <label
-            style={props.night ? { color: "#fff" } : { color: "#828282" }}
-            htmlFor="amount"
-          >
-            Amount
-          </label>
           <div className={InputWrapper}>
-            <span style={fontDarkStyle}>SOL</span>
+            {/* <span style={fontDarkStyle}>SOL</span> */}
+            <label
+              className={!focusPrice ? "Label" : "LabelFocus"}
+              style={props.night ? { color: "#fff" } : { color: "#828282" }}
+              htmlFor="amount"
+            >
+              Amount
+            </label>
             <input
-              className={Amount}
+              className="CalInput"
               value={amount}
               onChange={onAmountChange}
               style={fontDarkStyle}
               id="amount"
               name="amount"
+              onFocus={() => setFocusPrice(true)}
             />
           </div>
-          <label
-            style={props.night ? { color: "#fff" } : { color: "#828282" }}
-            htmlFor="target-price"
-          >
-            Target Price
-          </label>
+
           <div className={InputWrapper}>
-            <span style={fontDarkStyle}>USD</span>
+            {/* <span style={fontDarkStyle}>USD</span> */}
+            <label
+              className={!focusAmount ? "Label" : "LabelFocus"}
+              style={props.night ? { color: "#fff" } : { color: "#828282" }}
+              htmlFor="target-price"
+            >
+              Target Price
+            </label>
             <input
-              className={Price}
+              onFocus={() => setFocusAmount(true)}
+              className="CalInput"
               value={targetPrice}
               onChange={onPriceChange}
               style={fontDarkStyle}
@@ -157,12 +165,7 @@ export default function Main(props) {
             />
           </div>
           <input
-            style={
-              props.night
-                ? { background: "#000", color: "#fff" }
-                : { background: "#c4c4c499", color: "#000" }
-            }
-            className={Button}
+            className={!props.night ? Button : ButtonNight}
             type="submit"
             onClick={onCalculate}
             value="CALCULATE"

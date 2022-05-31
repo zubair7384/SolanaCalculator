@@ -97,13 +97,13 @@
 @media only screen and (max-width: 600px) {
   .AppFooter {
     position: fixed;
-    height: 20vh;
+    height: 18vh;
     bottom: 0;
     width: 100%;
   }
   .CryptoWrapperDark,
   .CryptoWrapper {
-    height: 50px;
+    height: 40px;
   }
   .ItemWrapper > h3 {
     font-size: 30px;
@@ -127,7 +127,7 @@
     background: linear-gradient(
       180deg,
       #ffffff 0%,
-      rgba(255, 255, 255, 0.02) 38.44%
+      rgba(255, 255, 255, 0.02) 62.44%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -136,11 +136,23 @@
   }
   .FooterBrand > h2,
   .FooterBrandDark > h2 {
-    font-size: 170px;
-    line-height: 140px;
+    font-size: 124px;
+    line-height: 103px;
   }
 }
+/* @media only screen and (max-width: 420px) {
+  .FooterBrand > h2,
+  .FooterBrandDark > h2 {
+    font-size: 100px;
+    line-height: 84px;
+  }
+} */
 @media only screen and (max-width: 360px) {
+  .FooterBrand > h2,
+  .FooterBrandDark > h2 {
+    font-size: 100px;
+    line-height: 84px;
+  }
   .CryptoWrapperDark,
   .CryptoWrapper {
     height: 30px;
@@ -176,10 +188,5 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-  }
-  .FooterBrand > h2,
-  .FooterBrandDark > h2 {
-    font-size: 110px;
-    line-height: 88%;
   }
 }

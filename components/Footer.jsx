@@ -16,7 +16,16 @@ const Footer = (props) => {
   } = styles;
 
   return (
-    <div className={AppFooter}>
+    <div
+      className={AppFooter}
+      style={
+        night
+          ? { background: "#000" }
+          : {
+              background: "#fff",
+            }
+      }
+    >
       <div className={night ? CryptoWrapperDark : CryptoWrapper}>
         <Marquee gradientWidth="0">
           {cryptoData &&

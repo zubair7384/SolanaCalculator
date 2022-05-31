@@ -62,6 +62,11 @@ a {
   color: #15f095;
 }
 
+.Amount:focus + .Label {
+  background-color: red;
+  display: none !important;
+}
+
 .dropdown {
   display: flex;
   justify-content: space-evenly;
@@ -136,6 +141,37 @@ a {
   background: rgba(242, 242, 242, 0.9) !important;
   backdrop-filter: blur(100px) !important;
 }
+.CalInput {
+  width: 100%;
+  margin: 34px 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: 18px;
+  margin-top: 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+.Label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 2px;
+  line-height: 7px;
+  color: #d2d2d2;
+  transform: translateY(35px);
+}
+.LabelFocus {
+  transform: translateY(16px);
+}
+.CalInput:hover + .Label {
+  background-color: red;
+  display: none !important;
+}
 .Loader {
   display: flex;
   height: 100vh;
@@ -155,14 +191,29 @@ a {
     height: 100%;
     margin-top: 6%;
   }
-}
-@media only screen and (max-width: 420px) {
   .dropdown {
-    width: 63px;
+    width: 74px;
     height: 27px;
     margin-right: 2px;
+    justify-content: space-between;
+    padding: 4px;
   }
   .dropdown > p {
     font-size: 10px;
   }
+  .CalInput {
+    margin: 6px 0;
+    font-size: 12px;
+  }
+  .Label {
+    font-size: 12px;
+    transform: translateY(26px);
+  }
+  .LabelFocus {
+    transform: translateY(12px);
+    font-size: 12px;
+  }
 }
+/* @media only screen and (max-width: 420px) {
+  
+} */
