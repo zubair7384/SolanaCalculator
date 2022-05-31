@@ -374,7 +374,7 @@
 }
 @media only screen and (max-width: 360px) {
   .MainWrapper {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .Calculator {
     width: 90%;
@@ -382,7 +382,6 @@
     margin: 20px;
     padding: 18px 20px 5px 20px;
     border-radius: 46px;
-    margin-top: -30px;
   }
   .FormWrapper {
     margin-top: 0;
