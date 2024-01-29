@@ -63,7 +63,7 @@
 .FooterBrandDark {
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 62.44%);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 92.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,7 +73,7 @@
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    rgba(255, 255, 255, 0.02) 62.44%
+    rgba(255, 255, 255, 0.02) 92.44%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

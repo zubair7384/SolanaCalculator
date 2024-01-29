@@ -39,7 +39,11 @@ const Footer = (props) => {
       <div className={CalculatorCopyRight}>
         <p>Solana Claculator - Copyright 2022 | solanacalculator.com</p>
       </div>
-      <Marquee gradientWidth="0" direction="right">
+      <Marquee
+        gradientWidth="0"
+        direction="right"
+        style={{ overflow: "hidden" }}
+      >
         <div className={night ? FooterBrandDark : FooterBrand}>
           <h2>SOLANA CALCULATOR</h2>
         </div>
