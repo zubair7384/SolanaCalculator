@@ -26,7 +26,7 @@ const Footer = (props) => {
             }
       }
     >
-      <div className={night ? CryptoWrapperDark : CryptoWrapper}>
+      {/* <div className={night ? CryptoWrapperDark : CryptoWrapper}>
         <Marquee gradientWidth="0">
           {cryptoData &&
             cryptoData.map((item) => (
@@ -35,7 +35,7 @@ const Footer = (props) => {
               </div>
             ))}
         </Marquee>
-      </div>
+      </div> */}
       <div className={CalculatorCopyRight}>
         <p>Solana Claculator - Copyright 2022 | solanacalculator.com</p>
       </div>

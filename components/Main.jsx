@@ -171,7 +171,7 @@ export default function Main(props) {
             value="CALCULATE"
           />
         </div>
-        <div className={ResultWrapper} style={{ marginTop: "1.5rem" }}>
+        <div className={ResultWrapper} style={{ marginTop: "3rem" }}>
           <div className={TotalValue}>
             <p style={fontDarkStyle}>Total Value</p>
             <span style={fontDarkStyle}>
