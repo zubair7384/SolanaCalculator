@@ -24,41 +24,17 @@ export default function Home() {
   const now = new Date();
   const _ampm = now.toLocaleTimeString().split(" ");
   const _time = now.toLocaleTimeString().split(":");
-  const { isLoading, error, data } = useQuery("cryptoData", () =>
-    Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=10").then(
-      (res) => res.data
-    )
-  );
 
-  const getCryptoData = async () => {
-    const coin = await data?.coins?.filter((coin) => coin.id == "solana");
-    const solanal = coin && coin[0];
-    setSol(solanal);
-    setCryptoData(data?.coins);
+  // if (isLoading)
+  //   return (
+  //     <div className="Loader">
+  //       <Spinner animation="border" role="status">
+  //         <span className="visually-hidden">Loading...</span>
+  //       </Spinner>
+  //     </div>
+  //   );
 
-    setAmpm(_ampm[1]);
-    setTime(_time[0]);
-    if ((time >= 7 && ampm === "PM") || (time >= 12 && ampm === "AM")) {
-      setDark(true);
-    }
-    if (time >= 6 && ampm === "AM") {
-      setDark(false);
-    }
-  };
-
-  useEffect(() => {
-    getCryptoData();
-  }, [data]);
-  if (isLoading)
-    return (
-      <div className="Loader">
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
-
-  if (error) return "An error has occurred: " + error.message;
+  // if (error) return "An error has occurred: " + error.message;
   return (
     <div
       className={styles.container}

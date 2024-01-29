@@ -28,37 +28,6 @@ const CurrencyModal = (props) => {
     setActiveCurrency(index);
     setCurrencySelect(true);
   };
-  const requestOptions = {
-    redirect: "follow",
-  };
-  // const { isLoading, error, data } = useQuery("exchageRates", () =>
-  //   Axios({
-  //     method: "get",
-  //     url: "https://api.apilayer.com/exchangerates_data/latest?base=USD&apikey=zWveZDhWJCpDbtQPewIRNqjJiPzfjDPz",
-  //     requestOptions,
-  //   }).then((res) => res.data)
-  // );
-  const getCurrencyData = async () => {
-    // const res = await Axios({
-    //   method: "get",
-    //   url: "https://api.apilayer.com/exchangerates_data/latest?base=USD&apikey=zWveZDhWJCpDbtQPewIRNqjJiPzfjDPz",
-    //   requestOptions,
-    // });
-    // const arr = Object.keys(data?.rates).map((key) => ({
-    //   name: key,
-    //   value: data?.rates[key],
-    // }));
-    // setCurrencyRates(arr);
-  };
-  useEffect(() => {
-    const data = localStorage.getItem("toLocal");
-    data ? setToLocal(JSON.parse(data)) : "";
-  }, []);
-  useEffect(() => {
-    getCurrencyData();
-    localStorage.setItem("toLocal", JSON.stringify(toLocal));
-  }, [toLocal]);
-
   return (
     <>
       <Modal

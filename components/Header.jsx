@@ -61,7 +61,7 @@ export default function Header(props) {
           </h2>
         </div>
         <div className={TooglerWrapper}>
-          <div
+          {/* <div
             className={DropDown}
             style={
               props.night ? { background: "#333333" } : { background: "#fff" }
@@ -96,7 +96,7 @@ export default function Header(props) {
                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-          </div>
+          </div> */}
           <div onClick={props.handleDark} className={DarkModeButton}>
             {props.night ? (
               <Image
